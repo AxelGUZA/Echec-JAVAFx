@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="518.0" prefWidth="536.0" GridPane.columnIndex="1">
+         <children>
+            <GridPane fx:id="gridEchec" layoutX="37.0" layoutY="86.0" prefHeight="397.0" prefWidth="440.0" style="-fx-border-color: black;">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="50.0" />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+              </rowConstraints>
+               <children>
+                  <Canvas fx:id="canva0x1" height="53.0" width="57.0" GridPane.columnIndex="1" />
+                  <Canvas fx:id="canva0x0" height="53.0" width="57.0" />
+                  <Canvas fx:id="canva0x2" height="53.0" width="57.0" GridPane.columnIndex="2" />
+                  <Canvas fx:id="canva0x3" height="53.0" width="57.0" GridPane.columnIndex="3" />
+                  <Canvas fx:id="canva0x4" height="53.0" width="57.0" GridPane.columnIndex="4" />
+                  <Canvas fx:id="canva0x5" height="53.0" width="57.0" GridPane.columnIndex="5" />
+                  <Canvas fx:id="canva0x6" height="53.0" width="57.0" GridPane.columnIndex="6" />
+                  <Canvas fx:id="canva0x7" height="53.0" width="57.0" GridPane.columnIndex="7" />
+                  <Canvas fx:id="canva1x0" height="53.0" width="57.0" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva1x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canva2x0" height="53.0" width="57.0" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva2x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <Canvas fx:id="canva3x0" height="53.0" width="57.0" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva3x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <Canvas fx:id="canva4x0" height="53.0" width="57.0" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva4x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                  <Canvas fx:id="canva6x0" height="53.0" width="57.0" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva6x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva5x0" height="53.0" width="57.0" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva5x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                  <Canvas fx:id="canva6x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva6x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva6x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva6x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva6x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva6x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                  <Canvas fx:id="canva7x0" height="53.0" width="57.0" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x1" height="53.0" width="57.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x2" height="53.0" width="57.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x3" height="53.0" width="57.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x4" height="53.0" width="57.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x5" height="53.0" width="57.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x6" height="53.0" width="57.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                  <Canvas fx:id="canva7x7" height="53.0" width="57.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="14.0" prefHeight="17.0" prefWidth="270.0" text="Echec">
+               <font>
+                  <Font name="Apple Chancery" size="13.0" />
+               </font>
+            </Label>
+            <GridPane layoutY="86.0" prefHeight="397.0" prefWidth="38.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="8" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="7" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="6" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="5" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="4" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="3" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="2" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="1" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="38.0" layoutY="482.0" prefHeight="24.0" prefWidth="440.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="a" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="b" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="c" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="d" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="e" GridPane.columnIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="f" GridPane.columnIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="g" GridPane.columnIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="h" GridPane.columnIndex="7" />
+                  <GridPane prefHeight="397.0" prefWidth="38.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane layoutX="488.0" layoutY="86.0" prefHeight="397.0" prefWidth="38.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="2" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="3" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="4" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="5" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="6" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="7" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="35.0" text="8" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="37.0" layoutY="61.0" prefHeight="24.0" prefWidth="440.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="h" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="g" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="f" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="e" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="d" GridPane.columnIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="c" GridPane.columnIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="b" GridPane.columnIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="56.0" text="a" GridPane.columnIndex="7" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
