@@ -1,34 +1,46 @@
 package application;
 
+import javafx.application.Platform;
+
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-//import javafx.scene.layout.GridPane;
-//import javafx.scene.layout.StackPane;
+import javafx.scene.control.MenuItem;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 
 public class Controller {
 
     @FXML
     public GridPane gridEchec;
 
+    //public Path path = Paths.get();
+
     @FXML
-    private Canvas canva0x0, canva0x1,canva0x2,canva0x3,canva0x4,canva0x5,canva0x6,canva0x7;
+    public MenuItem APropos,regle,fermeFenetre,sauvegardeFichier,ouvrirFichier;
+
     @FXML
-    private Canvas canva1x0, canva1x1,canva1x2,canva1x3,canva1x4,canva1x5,canva1x6,canva1x7;
+    public Canvas canva0x0, canva0x1,canva0x2,canva0x3,canva0x4,canva0x5,canva0x6,canva0x7;
     @FXML
-    private Canvas canva2x0, canva2x1,canva2x2,canva2x3,canva2x4,canva2x5,canva2x6,canva2x7;
+    public Canvas canva1x0, canva1x1,canva1x2,canva1x3,canva1x4,canva1x5,canva1x6,canva1x7;
     @FXML
-    private Canvas canva3x0, canva3x1,canva3x2,canva3x3,canva3x4,canva3x5,canva3x6,canva3x7;
+    public Canvas canva2x0, canva2x1,canva2x2,canva2x3,canva2x4,canva2x5,canva2x6,canva2x7;
     @FXML
-    private Canvas canva4x0, canva4x1,canva4x2,canva4x3,canva4x4,canva4x5,canva4x6,canva4x7;
+    public Canvas canva3x0, canva3x1,canva3x2,canva3x3,canva3x4,canva3x5,canva3x6,canva3x7;
     @FXML
-    private Canvas canva5x0, canva5x1,canva5x2,canva5x3,canva5x4,canva5x5,canva5x6,canva5x7;
+    public Canvas canva4x0, canva4x1,canva4x2,canva4x3,canva4x4,canva4x5,canva4x6,canva4x7;
     @FXML
-    private Canvas canva6x0, canva6x1,canva6x2,canva6x3,canva6x4,canva6x5,canva6x6,canva6x7;
+    public Canvas canva5x0, canva5x1,canva5x2,canva5x3,canva5x4,canva5x5,canva5x6,canva5x7;
     @FXML
-    private Canvas canva7x0, canva7x1,canva7x2,canva7x3,canva7x4,canva7x5,canva7x6,canva7x7;
+    public Canvas canva6x0, canva6x1,canva6x2,canva6x3,canva6x4,canva6x5,canva6x6,canva6x7;
+    @FXML
+    public Canvas canva7x0, canva7x1,canva7x2,canva7x3,canva7x4,canva7x5,canva7x6,canva7x7;
 
 
 
@@ -38,6 +50,7 @@ public class Controller {
 
     @FXML
     private Canvas canvaTab[][] = new Canvas[8][8];
+
 
 
     @FXML
@@ -52,14 +65,14 @@ public class Controller {
         for(int i = 0; i < 8 ; i=i+2)
         {
             for(int y = 0; y < 8; y= y+2){
-                greyCase(this.canvaTab[i][y]);
+                colorCase(this.canvaTab[i][y],Color.BLACK,60);
             }
         }
 
         for(int i = 1; i < 8 ; i=i+2)
         {
             for(int y = 1; y < 8; y= y+2){
-                greyCase(this.canvaTab[i][y]);
+                colorCase(this.canvaTab[i][y],Color.BLACK,60);
             }
         }
 
@@ -145,16 +158,30 @@ public class Controller {
     }
 
     @FXML
-    public void greyCase(Canvas canva){
+    public void colorCase(Canvas canva, Color color, int taille){
         GraphicsContext gc = canva.getGraphicsContext2D();
-        gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,100,100);
-        //this.canva0x0.setStyle("-fx-background-color: black");
+        gc.setFill(color);
+        gc.fillRect(3,3,taille,taille);
+        
 
     }
 
+    public void close(){
+        Platform.exit();
+    }
+
+
+    public void redCase(MouseEvent mouseEvent) {
+        int valeur = Integer.valueOf(mouseEvent.getPickResult().getIntersectedNode().getId().substring(5,6));
+        int valeur2 = Integer.valueOf(mouseEvent.getPickResult().getIntersectedNode().getId().substring(7,8));
 
 
 
+        canvaTab[valeur][valeur2].setOnMouseExited(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent me) {
 
+                colorCase(canvaTab[valeur][valeur2],Color.RED,70);
+            }
+        });
+    }
 }
