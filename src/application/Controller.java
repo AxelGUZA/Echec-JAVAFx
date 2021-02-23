@@ -11,12 +11,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 
 public class Controller {
 
+    final int tailleDesCases = 55;
     @FXML
     public GridPane gridEchec;
 
@@ -56,30 +54,39 @@ public class Controller {
     @FXML
     public void initialize(){
         remplissageTableauDeCanvas();
-        pionNoir[0] = new Pion(3,3, gridEchec);
+        pionNoir[0] = new Pion(3,3,Color.GREEN,canvaTab, gridEchec);
         echiquier = new Echiquier(canvaTab, gridEchec,pionNoir,pionBlanc);
 
-        pionNoir[0].whereIAm();
+        //Creating the mouse event handler
+        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent e) {
+                pionNoir[0].deplacement();
+            }
+        };
+        //Registering the event filter
+        pionNoir[0].canva[pionNoir[0].getX()][pionNoir[0].getY()].addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
 
 
+
+
+
+    }
+
+    private void colorEchiquier() {
         for(int i = 0; i < 8 ; i=i+2)
         {
             for(int y = 0; y < 8; y= y+2){
-                colorCase(this.canvaTab[i][y],Color.BLACK,60);
+                colorCase(this.canvaTab[i][y],Color.BLACK,tailleDesCases);
             }
         }
 
         for(int i = 1; i < 8 ; i=i+2)
         {
             for(int y = 1; y < 8; y= y+2){
-                colorCase(this.canvaTab[i][y],Color.BLACK,60);
+                colorCase(this.canvaTab[i][y],Color.BLACK,tailleDesCases);
             }
         }
-
-
-
-
-
     }
 
     private void remplissageTableauDeCanvas() {
@@ -155,13 +162,15 @@ public class Controller {
         canvaTab[7][5] =this.canva7x5;
         canvaTab[7][6] =this.canva7x6;
         canvaTab[7][7] =this.canva7x7;
+
+        colorEchiquier();
     }
 
     @FXML
     public void colorCase(Canvas canva, Color color, int taille){
         GraphicsContext gc = canva.getGraphicsContext2D();
         gc.setFill(color);
-        gc.fillRect(3,3,taille,taille);
+        gc.fillRect(0,0,taille,taille);
         
 
     }
@@ -180,7 +189,7 @@ public class Controller {
         canvaTab[valeur][valeur2].setOnMouseExited(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
 
-                colorCase(canvaTab[valeur][valeur2],Color.RED,70);
+                //colorCase(canvaTab[valeur][valeur2],Color.RED,tailleDesCases);
             }
         });
     }
