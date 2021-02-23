@@ -7,12 +7,15 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
+import java.util.Arrays;
+
 public class Piece {
     int x,y;
     Color color;
     String nom;
     Canvas[][] canva;
     GridPane grid;
+    boolean click;
 
     public Piece(String nom,Color color,int x,int y,Canvas[][] canva,GridPane grid){
         this.x = x;
@@ -21,11 +24,16 @@ public class Piece {
         this.nom = nom;
         this.canva = canva;
         this.grid = grid;
+        this.click = false;
     }
 
 
     public Color getColor() {
         return color;
+    }
+
+    public Canvas getCanva(){
+        return this.canva[this.getX()][getY()];
     }
 
 
@@ -77,13 +85,33 @@ public class Piece {
     }
 
     @FXML
-    public void colorCaseCarre(Canvas canva, Color color, int taille){
+    public void colorCaseCarre(Canvas canva){
         GraphicsContext gc = canva.getGraphicsContext2D();
-        gc.setFill(color);
-        gc.fillRect(0,0,taille,taille);
+        gc.clearRect(0,0,100,100);
 
 
     }
 
+    @Override
+    public String toString() {
+        return "Piece{" +
+                "x=" + x +
+                ", y=" + y +
+                ", color=" + color +
+                ", nom='" + nom + '\'' +
+                ", canva=" + Arrays.toString(canva) +
+                ", grid=" + grid +
+                '}';
+    }
+    public void isClicked(boolean click){
+        this.click = click;
+    }
 
+    public boolean isClicked(){
+       return this.click;
+    }
+
+    public String getCanvaName(){
+        return this.getCanva().getId();
+    }
 }
