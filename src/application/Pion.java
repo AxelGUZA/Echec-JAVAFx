@@ -25,16 +25,14 @@ public class Pion extends Piece{
 
 
     public void deplacement(){
-        this.colorCaseCarre(this.canva[this.getX()][this.getY()]);
-        this.setX(this.getX()-1);
+        this.colorCaseCarre(this.canva[this.x][this.y]);
+        this.setX(this.x-1);
         this.colorCaseOval();
-
-
-
     }
+
     @FXML
     public void colorCaseOval(){
-        GraphicsContext gc = this.canva[this.getX()][this.getY()].getGraphicsContext2D();
+        GraphicsContext gc = this.canva[this.x][this.y].getGraphicsContext2D();
         gc.setFill(this.color);
         gc.fillOval(11,8,35 ,35);
         //this.canva0x0.setStyle("-fx-background-color: black");
@@ -42,7 +40,7 @@ public class Pion extends Piece{
 
     @FXML
     public void colorCaseOvalSelection(){
-        GraphicsContext gc = this.canva[this.getX()][this.getY()].getGraphicsContext2D();
+        GraphicsContext gc = this.canva[this.x][this.y].getGraphicsContext2D();
         gc.setFill(Color.RED);
         gc.fillOval(10,7,37 ,37);
         gc.setFill(this.color);
@@ -56,11 +54,14 @@ public class Pion extends Piece{
 
 
     public void deplacementCondition(){
-            if (!this.isClicked()) {
+            if (this.isClicked() != true) {
                 this.colorCaseOvalSelection();
                 this.isClicked(true);
             } else {
+
+                this.isClicked(false);
                 this.deplacement();
+
             }
         }
 

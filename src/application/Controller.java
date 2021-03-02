@@ -4,6 +4,9 @@ import javafx.application.Platform;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.MenuItem;
@@ -12,8 +15,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
 
 import java.io.File;
+import java.io.IOException;
 
 
 public class Controller {
@@ -64,13 +70,10 @@ public class Controller {
     @FXML
     public void initialize(){
         remplissageTableauDeCanvas();
-        pionNoir[0] = new Pion(3,3,Color.GREEN,canvaTab, gridEchec);
-        pionNoir[1] = new Pion(3,2,Color.GREEN,canvaTab, gridEchec);
+        pionNoir[0] = new Pion(1,3,Color.GREEN,canvaTab, gridEchec);
+       // pionNoir[1] = new Pion(3,2,Color.GREEN,canvaTab, gridEchec);
         eventHandlerMouse();
         //echiquier = new Echiquier(canvaTab, gridEchec,pionNoir,pionBlanc);
-
-        //Creating the mouse event handler
-
 
 
     }
@@ -83,18 +86,53 @@ public class Controller {
                 String valeur = e.getPickResult().getIntersectedNode().getId();
 
                 while(pionNoir[i] != null) {
-
+                    System.out.print(pionNoir[i].getCanvaName()+ " = " + valeur + "\n");
+                    System.out.print(pionNoir[i].getX()+ " + " + pionNoir[i].getY() + "\n");
                     if(pionNoir[i].getCanvaName().equals(valeur))
                     pionNoir[i].deplacementCondition();
+
+                    //System.out.printf("Ici  : " +pionNoir[i].getCanvaName());
+                    for(int j = 0; j < 8; j++){
+
+                        if(pionNoir[i].getCanvaName().equals(canvaTab[0][j].getId())){
+
+                            System.out.printf("PieceTour/reine/etc." +canvaTab[0][j].getId()+"\n");
+
+                            fenetreChoixPion();
+
+
+
+                        }
+
+                    }
 
                     i++;
                 }
                 i=0;
 
             }
+
+
+
         };
         pionNoir[0].getCanva().addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
-        pionNoir[1].getCanva().addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
+        //pionNoir[1].getCanva().addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
+    }
+
+    private void fenetreChoixPion( )  {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("changePion.fxml"));
+            Stage choixPion = new Stage();
+            choixPion.setTitle("Choix des pions");
+            choixPion.setScene(new Scene(root, 602, 194));
+            choixPion.show();
+            choixPion.getIcons().add(new Image(Main.class.getResourceAsStream("echec.png")));
+            choixPion.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
